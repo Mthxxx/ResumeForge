@@ -1,0 +1,233 @@
+/* Container principal */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gradient); /* ✅ Degradê da sua paleta */
+  padding: 20px;
+}
+
+/* Card de login */
+.loginCard {
+  background: var(--color-card); /* ✅ Branco */
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-main); /* ✅ Texto escuro */
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-text-sec); /* ✅ Cinza */
+}
+
+/* Badge Modo Teste */
+.testModeBadge {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.input {
+  padding: 12px 16px;
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary); /* ✅ Azul escuro */
+  background: var(--color-card);
+  box-shadow: 0 0 0 3px rgba(31, 58, 96, 0.1); /* ✅ Sombra azul */
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Esqueceu a senha */
+.forgotPassword {
+  text-align: right;
+  margin-top: -10px;
+}
+
+.forgotLink {
+  font-size: 13px;
+  color: var(--color-primary); /* ✅ Azul escuro */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgotLink:hover {
+  color: var(--color-btn-primary); /* ✅ Azul médio */
+  text-decoration: underline;
+}
+
+/* Botão de submit */
+.submitBtn {
+  padding: 14px;
+  background: var(--color-btn-primary); /* ✅ Azul médio */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--color-primary); /* ✅ Azul escuro */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 58, 96, 0.3); /* ✅ Sombra azul */
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mensagem de erro */
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #fff5f5;
+  border: 1px solid #fc8181;
+  border-radius: 10px;
+  color: #c53030;
+  font-size: 14px;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.errorIcon {
+  font-size: 18px;
+}
+
+/* Link para cadastro */
+.link {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--color-text-sec);
+}
+
+.link a {
+  color: var(--color-primary); /* ✅ Azul escuro */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link a:hover {
+  color: var(--color-btn-primary); /* ✅ Azul médio */
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .loginCard {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .oauthBtn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .submitBtn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "npm.enableScriptExplorer": true,
+  "npm.autoDetect": "on",
+  "npm.packageManager": "npm",
+  "npm.exclude": [
+    "**/node_modules/**"
+  ],
+  "git.ignoreLimitWarning": true
+}

@@ -1,0 +1,390 @@
+/* Container Principal */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+/* ========== HEADER ========== */
+.header {
+  background: #FFFFFF;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+}
+
+.backBtn {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.saveBtn,
+.exportBtn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.saveBtn {
+  background-color: var(--color-btn-primary);
+  color: #FFFFFF;
+}
+
+.saveBtn:hover {
+  background-color: #3a5a8f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(47, 74, 128, 0.3);
+}
+
+.exportBtn {
+  background-color: #28a745;
+  color: #FFFFFF;
+}
+
+.exportBtn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* ========== LAYOUT PRINCIPAL ========== */
+.editorLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ========== PREVIEW SECTION (ESQUERDA) ========== */
+.previewSection {
+  position: sticky;
+  top: 180px;
+  height: fit-content;
+}
+
+.previewTitle {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+}
+
+.resumePreview {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Header do Currículo */
+.resumeHeader {
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resumeName {
+  font-family: var(--font-family);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.resumeJobTitle {
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.resumeContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.resumeContact p {
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  color: var(--color-text-sec);
+}
+
+/* Seções do Currículo */
+.resumeSection {
+  margin-bottom: 2rem;
+}
+
+.resumeSectionTitle {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.resumeItem {
+  margin-bottom: 1.5rem;
+}
+
+.resumePeriod {
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  color: var(--color-text-sec);
+  margin-bottom: 0.3rem;
+}
+
+.resumeRole {
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.2rem;
+}
+
+.resumeCompany {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.resumeText {
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  color: var(--color-text-sec);
+  line-height: 1.6;
+}
+
+/* Skills Grid */
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skillTag {
+  background: var(--color-bg-sec);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+/* ========== FORM SECTION (DIREITA) ========== */
+.formSection {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.formTitle {
+  font-family: var(--font-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 2rem;
+}
+
+/* Form Groups */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: var(--color-text-main);
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(47, 74, 128, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Section Divider */
+.sectionDivider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 1.5rem 0;
+  padding-top: 2rem;
+  border-top: 2px solid var(--color-border);
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.addBtn {
+  background-color: var(--color-btn-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addBtn:hover {
+  background-color: #3a5a8f;
+  transform: translateY(-2px);
+}
+
+/* Item Card (Experiência/Educação) */
+.itemCard {
+  background: var(--color-bg-sec);
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #dc3545;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeBtn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+/* Skill Input */
+.skillInput {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skillInput .input {
+  flex: 1;
+}
+
+.skillInput .removeBtn {
+  position: static;
+  flex-shrink: 0;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 1200px) {
+  .editorLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .previewSection {
+    position: static;
+  }
+
+  .resumePreview {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .resumeName {
+    font-size: 2rem;
+  }
+
+  .formTitle {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,41 @@
+.footer {
+ 
+  width: 100%;
+  
+  background-color: var(--color-primary); /* O Azul escuro (#1F3A60) */
+  color: #FFFFFF;
+  
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100; /* Para garantir que fique sobre outros elementos se necessário */
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Separa texto da esquerda e direita */
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}

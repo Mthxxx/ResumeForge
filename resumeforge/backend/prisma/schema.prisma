@@ -1,0 +1,43 @@
+// Prisma Schema para ResumeForge
+// Conexão com Neon PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Modelo de Usuário
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String?   // Nullable para usuários que usam OAuth
+  name          String
+  avatar        String?
+  
+  // OAuth
+  googleId      String?   @unique
+  provider      String    @default("email") // "email" ou "google"
+  
+  // Metadados
+  emailVerified Boolean   @default(false)
+  isActive      Boolean   @default(true)
+  
+  // Timestamps
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  lastLoginAt   DateTime?
+
+  @@map("users")
+}
+
+
+
+
+
+
+
+

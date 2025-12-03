@@ -1,0 +1,259 @@
+/* Container Principal */
+.container {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  padding: 4rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Lado Esquerdo - Texto */
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-text-sec);
+  line-height: 1.6;
+}
+
+.ctaButton {
+  background-color: var(--color-btn-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  box-shadow: 0 4px 12px rgba(47, 74, 128, 0.2);
+}
+
+.ctaButton:hover {
+  background-color: #3a5a8f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(47, 74, 128, 0.3);
+}
+
+/* Lado Direito - Preview */
+.heroPreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewCard {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.previewHeader {
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.previewHeader h3 {
+  font-family: var(--font-family);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.previewContact {
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  color: var(--color-text-sec);
+  line-height: 1.6;
+}
+
+.previewSection {
+  margin-bottom: 1.5rem;
+}
+
+.previewSection h4 {
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.previewItem {
+  margin-bottom: 1rem;
+}
+
+.previewDate {
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  color: var(--color-text-sec);
+  margin-bottom: 0.25rem;
+}
+
+.previewRole {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.25rem;
+}
+
+.previewText {
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  color: var(--color-text-sec);
+  line-height: 1.5;
+}
+
+/* ========== TEMPLATES SECTION ========== */
+.templatesSection {
+  padding: 4rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 3rem;
+}
+
+.templatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.templateCard {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.templateCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.templatePreview {
+  background: var(--color-bg-sec);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miniTemplate {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.miniHeader {
+  height: 20px;
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+.miniLine {
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+.templateName {
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.viewAllButton {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 0.9rem 2rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewAllButton:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(47, 74, 128, 0.2);
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .templatesGrid {
+    grid-template-columns: 1fr;
+  }
+}
